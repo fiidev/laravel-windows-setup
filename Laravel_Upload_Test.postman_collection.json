@@ -1,0 +1,54 @@
+{
+  "info": {
+    "name": "Laravel SQLite File Upload API",
+    "description": "Postman Collection untuk menguji API upload file/image pada Laravel dengan SQLite dan storage:link.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Upload Image or File",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "file",
+              "type": "file",
+              "src": [],
+              "description": "Pilih file gambar atau dokumen yang ingin diupload"
+            },
+            {
+              "key": "title",
+              "value": "Testing Upload Laravel",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/upload",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "upload"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
